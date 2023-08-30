@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EC065559-3059-4D88-9737-C2BC3A529DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Domain", "Core\ETicaretAPI.Domain\ETicaretAPI.Domain.csproj", "{9FF2727D-864D-41FA-B625-4A4B6E8CA028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Application", "Core\ETicaretAPI.Application\ETicaretAPI.Application.csproj", "{ACA1EDAC-2DE8-4D77-AB1A-1BBCF6BB1496}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B468E94D-4F46-4B64-A6BD-BC85324E4D21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Infrastructure", "Infrastructure\ETicaretAPI.Infrastructure\ETicaretAPI.Infrastructure.csproj", "{FF930964-63AE-44CD-8E3D-893A3E041557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.Persistance", "Infrastructure\ETicaretAPI.Persistance\ETicaretAPI.Persistance.csproj", "{B2B0FC2F-F6D3-42FF-84C4-4D5AEB1FEAF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C79B20A3-3571-40B4-88DF-E10A9E25B0EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaretAPI.API", "Presentation\ETicaretAPI.API\ETicaretAPI.API.csproj", "{1766776A-5EAB-43E5-8903-E7EB64326775}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FF2727D-864D-41FA-B625-4A4B6E8CA028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF2727D-864D-41FA-B625-4A4B6E8CA028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF2727D-864D-41FA-B625-4A4B6E8CA028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF2727D-864D-41FA-B625-4A4B6E8CA028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA1EDAC-2DE8-4D77-AB1A-1BBCF6BB1496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA1EDAC-2DE8-4D77-AB1A-1BBCF6BB1496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA1EDAC-2DE8-4D77-AB1A-1BBCF6BB1496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA1EDAC-2DE8-4D77-AB1A-1BBCF6BB1496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF930964-63AE-44CD-8E3D-893A3E041557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF930964-63AE-44CD-8E3D-893A3E041557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF930964-63AE-44CD-8E3D-893A3E041557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF930964-63AE-44CD-8E3D-893A3E041557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B0FC2F-F6D3-42FF-84C4-4D5AEB1FEAF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B0FC2F-F6D3-42FF-84C4-4D5AEB1FEAF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B0FC2F-F6D3-42FF-84C4-4D5AEB1FEAF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B0FC2F-F6D3-42FF-84C4-4D5AEB1FEAF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1766776A-5EAB-43E5-8903-E7EB64326775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1766776A-5EAB-43E5-8903-E7EB64326775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1766776A-5EAB-43E5-8903-E7EB64326775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1766776A-5EAB-43E5-8903-E7EB64326775}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB09833C-CBED-45A9-AF16-D06B061DEBC2}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9FF2727D-864D-41FA-B625-4A4B6E8CA028} = {EC065559-3059-4D88-9737-C2BC3A529DFA}
+		{ACA1EDAC-2DE8-4D77-AB1A-1BBCF6BB1496} = {EC065559-3059-4D88-9737-C2BC3A529DFA}
+		{FF930964-63AE-44CD-8E3D-893A3E041557} = {B468E94D-4F46-4B64-A6BD-BC85324E4D21}
+		{B2B0FC2F-F6D3-42FF-84C4-4D5AEB1FEAF1} = {B468E94D-4F46-4B64-A6BD-BC85324E4D21}
+		{1766776A-5EAB-43E5-8903-E7EB64326775} = {C79B20A3-3571-40B4-88DF-E10A9E25B0EC}
+	EndGlobalSection
+EndGlobal
