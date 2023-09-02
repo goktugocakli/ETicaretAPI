@@ -1,8 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using ETicaretAPI.Application.Features.Commands.Product.CreateProduct;
+using ETicaretAPI.Application.Features.Commands.Product.DeleteProduct;
+using ETicaretAPI.Application.Features.Commands.Product.UpdateProduct;
+using ETicaretAPI.Application.Features.Queries.Product.GetAllProducts;
+using ETicaretAPI.Application.Features.Queries.Product.GetProductById;
 using ETicaretAPI.Application.Repositories;
+using ETicaretAPI.Application.RequestParameters;
+using ETicaretAPI.Application.ViewModels.Products;
+using ETicaretAPI.Domain.Entities;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,57 +21,59 @@ using Microsoft.AspNetCore.Mvc;
 namespace ETicaretAPI.API.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class ProductsController : ControllerBase
     {
         private readonly IProductReadRepository _productReadRepository;
         private readonly IProductWriteRepository _productWriteRepository;
 
-        public ProductsController(IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository)
+        readonly IMediator _mediator;
+
+        public ProductsController(IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository, IMediator mediator)
         {
             _productReadRepository = productReadRepository;
             _productWriteRepository = productWriteRepository;
+            _mediator = mediator;
         }
 
         [HttpGet]
-        public IActionResult GetProducts()
+        public async Task<IActionResult> GetProducts([FromQuery]GetAllProductQueryRequest getAllProductQueryRequest)
         {
+            GetAllProductQueryResponse response = await _mediator.Send(getAllProductQueryRequest);
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct([FromBody]CreateProductCommandRequest createProductCommandRequest)
+        {
+            CreateProductCommandResponse response = await _mediator.Send(createProductCommandRequest);
+            return StatusCode(StatusCodes.Status201Created);
+
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateProduct(UpdateProductCommandRequest updateProductCommandRequest)
+        {
+            UpdateProductCommandResponse response = await _mediator.Send(updateProductCommandRequest);
             return Ok();
         }
 
-        /*
-
-        // GET: api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> deleteProduct([FromRoute]DeleteProductCommandRequest deleteProductCommandRequest)
         {
-            return new string[] { "value1", "value2" };
+            await _mediator.Send(deleteProductCommandRequest);
+            return Ok();
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetProductById(GetProductByIdQueryRequest getProductByIdQueryRequest)
         {
-            return "value";
+            GetProductByIdQueryResponse response = await _mediator.Send(getProductByIdQueryRequest);
+            return Ok(response);
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-        */
+        
     }
 }
 

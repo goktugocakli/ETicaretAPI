@@ -14,14 +14,63 @@
     <None Remove="Repositories\Customer\" />
     <None Remove="Repositories\Order\" />
     <None Remove="Repositories\Product\" />
+    <None Remove="ViewModels\" />
+    <None Remove="ViewModels\Products\" />
+    <None Remove="Validations\" />
+    <None Remove="Validations\Products\" />
+    <None Remove="RequestParameters\" />
+    <None Remove="Features\" />
+    <None Remove="Features\Commands\" />
+    <None Remove="Features\Queries\" />
+    <None Remove="Features\Commands\Product\" />
+    <None Remove="Features\Commands\Product\CreateProduct\" />
+    <None Remove="Features\Queries\Product\" />
+    <None Remove="Features\Queries\Product\GetAllProducts\" />
+    <None Remove="Features\Commands\Product\UpdateProduct\" />
+    <None Remove="Features\Commands\Product\DeleteProduct\" />
+    <None Remove="Features\Queries\Product\GetProductById\" />
+    <None Remove="Features\Commands\AppUser\" />
+    <None Remove="Features\Commands\AppUser\CreateUser\" />
+    <None Remove="Exceptions\" />
+    <None Remove="Features\Commands\AppUser\LoginUser\" />
+    <None Remove="Abstractions\" />
+    <None Remove="Abstractions\Token\" />
+    <None Remove="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Repositories\Customer\" />
     <Folder Include="Repositories\Order\" />
     <Folder Include="Repositories\Product\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Products\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Validations\Products\" />
+    <Folder Include="RequestParameters\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\Queries\" />
+    <Folder Include="Features\Commands\Product\" />
+    <Folder Include="Features\Commands\Product\CreateProduct\" />
+    <Folder Include="Features\Queries\Product\" />
+    <Folder Include="Features\Queries\Product\GetAllProducts\" />
+    <Folder Include="Features\Commands\Product\UpdateProduct\" />
+    <Folder Include="Features\Commands\Product\DeleteProduct\" />
+    <Folder Include="Features\Queries\Product\GetProductById\" />
+    <Folder Include="Features\Commands\AppUser\" />
+    <Folder Include="Features\Commands\AppUser\CreateUser\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Features\Commands\AppUser\LoginUser\" />
+    <Folder Include="Abstractions\" />
+    <Folder Include="Abstractions\Token\" />
+    <Folder Include="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
 </Project>
