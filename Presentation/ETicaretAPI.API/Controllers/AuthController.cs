@@ -25,7 +25,7 @@ namespace ETicaretAPI.API.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> RefreshToken(RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
+        public async Task<IActionResult> RefreshToken([FromForm]RefreshTokenLoginCommandRequest refreshTokenLoginCommandRequest)
         {
             RefreshTokenLoginCommandResponse response = await _mediator.Send(refreshTokenLoginCommandRequest);
             return Ok(response);
