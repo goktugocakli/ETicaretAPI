@@ -18,7 +18,7 @@
     <None Remove="ViewModels\Products\" />
     <None Remove="Validations\" />
     <None Remove="Validations\Products\" />
-    <None Remove="RequestParameters\" />
+    <None Remove="modelParameters\" />
     <None Remove="Features\" />
     <None Remove="Features\Commands\" />
     <None Remove="Features\Queries\" />
@@ -46,9 +46,7 @@
     <Folder Include="ViewModels\Products\" />
     <Folder Include="Validations\" />
     <Folder Include="Validations\Products\" />
-    <Folder Include="RequestParameters\" />
-    <Folder Include="Features\" />
-    <Folder Include="Features\Commands\" />
+    <Folder Include="modelParameters\" />
     <Folder Include="Features\Queries\" />
     <Folder Include="Features\Commands\Product\" />
     <Folder Include="Features\Commands\Product\CreateProduct\" />
@@ -57,13 +55,9 @@
     <Folder Include="Features\Commands\Product\UpdateProduct\" />
     <Folder Include="Features\Commands\Product\DeleteProduct\" />
     <Folder Include="Features\Queries\Product\GetProductById\" />
-    <Folder Include="Features\Commands\AppUser\" />
     <Folder Include="Features\Commands\AppUser\CreateUser\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Features\Commands\AppUser\LoginUser\" />
-    <Folder Include="Abstractions\" />
     <Folder Include="Abstractions\Token\" />
-    <Folder Include="DTOs\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />

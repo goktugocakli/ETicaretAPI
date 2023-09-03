@@ -5,7 +5,9 @@ namespace ETicaretAPI.Application.DTOs
 	{
 		public string AccessToken { get; set; }
 		public DateTime Expiration { get; set; }
-		public Token()
+
+        public string RefreshToken { get; set; }
+        public Token()
 		{
 		}
 	}

@@ -37,16 +37,9 @@ namespace ETicaretAPI.API.Controllers
 
         // POST api/values
         [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody]CreateUserCommandRequest createUserCommandRequest)
+        public async Task<IActionResult> CreateUser([FromBody] CreateUserCommandRequest createUserCommandRequest)
         {
             CreateUserCommandResponse response = await _mediator.Send(createUserCommandRequest);
-            return Ok(response);
-        }
-
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
-        {
-            LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
             return Ok(response);
         }
 

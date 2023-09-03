@@ -11,8 +11,8 @@ namespace ETicaretAPI.Persistance.Contexts
 	{
 		public ETicaretAPIDbContext(DbContextOptions options) : base(options)
 		{
-
-		}
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        }
 
 		public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -31,6 +31,10 @@ namespace ETicaretAPI.Persistance.Contexts
 
                     case (EntityState.Modified):
                         data.Entity.UpdatedDate = DateTime.UtcNow;
+                        break;
+
+                    default:
+                        _ = DateTime.UtcNow;
                         break;
                 }
 

@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using ETicaretAPI.Persistance.Repositories;
 using ETicaretAPI.Application.Repositories;
 using ETicaretAPI.Domain.Entities.Identity;
+using ETicaretAPI.Application.Abstractions.Services;
+using ETicaretAPI.Persistance.Services;
 
 namespace ETicaretAPI.Persistance
 {
@@ -30,6 +32,9 @@ namespace ETicaretAPI.Persistance
 			service.AddScoped<IOrderReadRepository, OrderReadRepository>();
 			service.AddScoped<IProductReadRepository, ProductReadRepository>();
 			service.AddScoped<IProductWriteRepository, ProductWriteRepository>();
+
+			service.AddScoped<IUserService, UserService>();
+			service.AddScoped<IAuthService, AuthService>();
 		}
 	}
 }
